@@ -28,6 +28,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'nokogiri', '~> 1.6.1'
 
+gem 'rb-readline'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
