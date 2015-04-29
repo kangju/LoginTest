@@ -1,6 +1,19 @@
 Rails.application.routes.draw do
   resources :users
 
+  namespace :staff do
+    root 'top#index'
+  end
+
+  namespace :admin do
+    root 'top#index'
+  end
+
+  namespace :customer do
+    root 'top#index'
+  end
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
