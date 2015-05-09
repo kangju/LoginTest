@@ -1,3 +1,11 @@
 <header>
    <span class="logo-mark">BAUKIS</span>
+   <%= 
+   if current_staff_member
+      link_to 'Logout', :staff_session,method: :delete
+   else
+      link_to 'Login', :staff_login
+   end
+   %>
+
 </header><!-- /header -->
