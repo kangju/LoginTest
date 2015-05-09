@@ -31,13 +31,4 @@ ActiveRecord::Schema.define(version: 20150509031339) do
   add_index "staff_members", ["email_for_index"], name: "index_staff_members_on_email_for_index", unique: true
   add_index "staff_members", ["family_name_kana", "given_name_kana"], name: "index_staff_members_on_family_name_kana_and_given_name_kana"
 
-  create_table "users", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "password"
-    t.integer  "flg"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
 end
