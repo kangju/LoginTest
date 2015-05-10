@@ -13,12 +13,17 @@ class Staff::SessionsController < Staff::Base
       if @form.email.present?
          staff_member = StaffMember.find_by(email_for_index: @form.email.downcase)
       end
-      binding.pry
+      
       if staff_member
          session[:staff_member_id] = staff_member.id
          redirect_to :staff_root
       else
          render action: 'new'
       end
+   end
+
+   def destroy
+      session.delete :staff_member_id
+      redirect_to :staff_root
    end
 end
